@@ -3,11 +3,11 @@
 /* Layout  */
 main {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   /* vertical center   */
   align-content: center;
   /*  extend to viewport height  */
   height: 100vh;
+  grid-template-columns: 1fr;
 }
 
 main time {
@@ -15,22 +15,20 @@ main time {
   text-align: center;
 }
 
-time{
-  font-family: "Technor-Regular";
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: 
-  "hours minutes seconds amOrPM"
-  "month dayOfMonth year dayOfWeek";
-}
-
 .time {
-  font-size: 3rem;
+  font-family: "Technor-Medium";
+  font-size: 6rem;
+  width: 720px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
+  grid-template-areas:
+  "hours . minutes . seconds . amOrPM";
 }
 
 .date {
   font-size: 2rem;
+  font-family: "Technor-Light";
 }
 
 .hours {

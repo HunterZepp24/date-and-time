@@ -1,13 +1,25 @@
 @import url("technor.css");
 
+body {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: lime;
+}
 /* Layout  */
 main {
   display: grid;
   /* vertical center   */
+  justify-content: center;
   align-content: center;
   /*  extend to viewport height  */
-  height: 100vh;
+  height: 240px;
   grid-template-columns: 1fr;
+  background-color: black;
+  padding: 20px;
+  border-radius: 20px;
+  width: 720px;
 }
 
 main time {
@@ -18,33 +30,49 @@ main time {
 .time {
   font-family: "Technor-Medium";
   font-size: 6rem;
-  width: 720px;
+  color: white;
   margin: auto;
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
+  grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 1fr;
   grid-template-areas:
-  "hours . minutes . seconds . amOrPM";
+  ". hours colon1 minutes colon2 seconds amOrPM";
 }
 
 .date {
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Technor-Light";
+  color: white;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 3fr repeat(5, 1fr) 2fr 1fr 3fr;
+  grid-template-areas:
+  ". month . dayOfMonth . year dash dayOfWeek .";
 }
 
 .hours {
   grid-area: hours;
 }
 
+#colon1 {
+  grid-area: colon1;
+}
+
 .minutes {
   grid-area: minutes;
 }
 
+#colon2 {
+  grid-area: colon2;
+}
+
 .seconds {
   grid-area: seconds;
+  color: red;
 }
 
 .amOrPM {
   grid-area: amOrPM;
+  font-size: 1.5rem;
 }
 
 .month {
@@ -59,6 +87,10 @@ main time {
   grid-area: year;
 }
 
+#dash{
+  grid-area: dash;
+}
+
 .dayOfWeek {
-  grid-area: dayOfMonth;
+  grid-area: dayOfWeek;
 }

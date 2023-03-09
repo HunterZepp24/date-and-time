@@ -16,7 +16,7 @@ main {
   /*  extend to viewport height  */
   height: 240px;
   grid-template-columns: 1fr;
-  background-color: black;
+  background-color: rgba(0,0,0,.625);
   padding: 20px;
   border-radius: 20px;
   width: 720px;
